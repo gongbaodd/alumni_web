@@ -1,0 +1,25 @@
+<div class="add-more video">
+<div id="CuPlayer">
+<strong>请更新你的Flash播放器</strong>
+</div>
+<script type="text/javascript" src="../Images/swfobject.js"></script>
+<script type="text/javascript">
+var so = new SWFObject("../CuPlayerMiniV10_Black_S.swf","CuPlayer","210","165","9","#000000");
+so.addParam("allowfullscreen","true");
+so.addParam("allowscriptaccess","always");
+so.addParam("wmode","opaque");
+so.addParam("quality","high");
+so.addParam("salign","lt");
+so.addVariable("CuPlayerFile","../{{msg[0].newspic}}");
+so.addVariable("CuPlayerImage","../images/flashChangfa2.jpg");
+so.addVariable("CuPlayerShowImage","true");
+so.addVariable("CuPlayerWidth","260");
+so.addVariable("CuPlayerHeight","180");
+so.addVariable("CuPlayerAutoPlay","false");
+so.addVariable("CuPlayerAutoRepeat","true");
+so.addVariable("CuPlayerShowControl","true");
+so.addVariable("CuPlayerAutoHideControl","false");
+so.write("CuPlayer");		
+</script>
+<a href="javascript:void();" class="more"></a>
+</div>

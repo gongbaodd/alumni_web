@@ -1,0 +1,110 @@
+#header{
+  height:400px;
+  background: url(../images/background.jpg) repeat-x;
+  position: relative;
+
+  .logo{
+    background: url(../images/logo.png) no-repeat;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 1;
+  }
+
+  .links{
+    position: absolute;
+    top:10px;
+    right:120px;
+    z-index: 1;
+      ul{
+        list-style: none;
+      }
+      ul>li{
+        float: left;
+        margin: 5px;
+        a{
+          font-size: 12px;
+          color: #fff;
+          text-decoration: none;
+          &:after{
+            content: '    |'
+          }
+          &.last:after{
+            content: '     '
+          }
+          &:hover{
+            font-weight: bolder;
+          }
+        }
+      }
+  }
+  .header_back{
+    background: url(../images/header.png) no-repeat;
+    width: 750px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:0;
+  }
+  #carousel{
+    width: 320px;
+    height: 200px;
+    position: absolute;;
+    left: 150px;
+    bottom:80px;
+    box-shadow: #fff 0 0 50px;
+    p{
+      text-align: left;
+      a{color:#fff;text-decoration: none;text-shadow: #000 0 0 10px;}
+    }
+  }
+  #navbar{
+    position: absolute;;
+    bottom: -40px;
+    z-index: 2;
+    width: 100%;
+    .navbar{
+      border-radius:0px; 
+      text-align: center;
+      .navbar-nav{
+        margin: 0;
+        float: none;
+        li{float: left;}
+        .dropdown-menu li{width: 100%;}
+        display: inline-block;
+      } 
+    }
+  }
+  #findMe{
+    position: absolute;
+    bottom: 50px;
+    right: 120px;
+    ul{list-style: none;}
+    ul>li{float: left;margin-right: 10px;margin-left:10px;}
+    img{
+      border-radius: 50px;
+      border:5px solid #eee;
+      box-shadow: #000 0 0 10px;
+    }
+    img:hover{opacity: 0.8;}
+  }
+  #modal{
+    .modal-body{
+      overflow: hidden;
+      a>img{
+        margin-right:10px;  
+      }
+      a{text-decoration: none;;color: #333;}
+    }
+    .well{
+      float: left;
+      margin:8px;
+      iframe{
+        border: 0;
+      }
+    }
+  }
+}

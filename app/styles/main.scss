@@ -1,0 +1,89 @@
+$icon-font-path: '../fonts';
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+body{
+  background-color: #fff;
+  min-width: 1080px;
+}
+
+.well{overflow: hidden;}
+#container .list-group-item{
+	padding-left: 30px;padding-right: 30px;
+	border-style: dashed;
+	border-right: none;
+	border-left: none;
+}
+#sidebar .list-group-item{
+	padding-left: 30px;padding-right: 30px;
+	border-style: dashed;
+	border-right: none;
+	border-left: none;
+}
+
+.add-more{position: relative;overflow: hidden;}
+#container .add-more a.more{
+	margin-top: 0;margin-right: 0;margin-bottom: 0;margin-left: 0;
+	padding-top: 0;padding-right:0;padding-bottom: 0;padding-left: 0; 
+	width: 20px;
+	height: 20px;
+	background:url(../images/more.png) no-repeat;
+	color: #337ab7;
+	font-weight: bolder; 
+	font-size: 30px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	opacity: 0.4;
+	&:hover{
+		opacity: 1;
+	}
+}
+#footer{position: relative;}
+#footer a.more{
+	float: left;
+  	background: #fff;
+  	margin-top: 20px;
+  	margin-left: 5px;
+  	width: 130px;
+  	height: 148px;
+  	border: 1px #ddd solid;
+  	display: block;
+  	text-decoration: none;
+  	text-align: center;
+  	font-size: 60px;
+  	padding-top: 30px;
+  	font-weight: bold;
+}
+
+.list-group .list-group-item:first-child{border-top: 0;}
+.list-group .list-group-item:last-child{border-bottom: 0;}
+
+#container{
+	width: 1000px;
+	margin: 40px auto;
+	overflow: hidden;
+	.panel-heading,.nav .active a{
+		color:#337ab7;
+		font-weight: bolder;
+	}
+	.nav{
+		background-color: #f5f5ff;
+	}
+	.nav li a{
+		color:#337ab7;
+	}
+	.panel a{
+		text-decoration: none;
+		color: #232323;
+	}
+	.navbar{
+		text-align: center;
+	}
+	.navbar-nav{
+		float: none;
+		display: inline-block;
+	}
+}
+

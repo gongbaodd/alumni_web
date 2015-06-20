@@ -1,0 +1,52 @@
+<div class="panel panel-default" role="tabpanel">
+	<ul class="nav nav-tabs" role="tablist">
+  		<li role="presentation" class="active">
+  			<a href="#link1"　aria-controls="link1" data-toggle="tab">校内链接</a>
+  		</li>
+  		<li role="presentation">
+  			<a href="#link2" aria-controls="link2" data-toggle="tab">校外连接</a>
+  		</li>
+	</ul>
+	<div class="tab-content">
+  		<div role="tabpanel" class="tab-pane active" id="link1">
+  			{{each msg1 as msg index}}
+  			<ul {{if index===0}}class="list-group"{{else}}class="list-group hide"{{/if}}>
+				{{each msg as value}}
+  				<li class="list-group-item">
+  					<a href="{{value.url}}" target="_blank">
+  						{{value.sitename}}
+  					</a>
+  				</li>
+  				{{/each}}
+  			</ul>
+  			{{/each}}
+  			<div class="pagination-cover">
+  				<ul class="pagination pagination-sm">
+  				{{each msg1 as value index}}
+  					<li {{if index===0}}class="active"{{/if}}><a href="javascript:void();">{{index+1}}</a></li>
+  				{{/each}}
+				</ul>
+  			</div>
+  		</div>
+  		<div role="tabpanel" class="tab-pane" id="link2">
+  			{{each msg2 as msg index}}
+  			<ul {{if index===0}}class="list-group"{{else}}class="list-group hide"{{/if}}>
+				{{each msg as value}}
+  				<li class="list-group-item">
+  					<a href="{{value.url}}" target="_blank">
+  						{{value.sitename}}
+  					</a>
+  				</li>
+  				{{/each}}
+  			</ul>
+  			{{/each}}
+  			<div class="pagination-cover">
+  				<ul class="pagination pagination-sm">
+  				{{each msg2 as value index}}
+  					<li {{if index===0}}class="active"{{/if}}><a href="javascript:void();">{{index+1}}</a></li>
+  				{{/each}}
+				</ul>
+  			</div>
+  		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+#bottom {
+	width: 1000px;
+	 margin: -40px auto;
+	 overflow: hidden;
+	 margin-bottom: 10px;
+}
+.bottom-well{
+	width: 940px;
+	ul.nav{
+		text-align: center;
+	}
+	.nav>li{
+		display: inline-block;
+		float: none;
+	}
+	.thumbnail{
+		overflow: hidden;
+		float: left;
+		width: 130px;
+		margin:20px 5px 0 5px; 
+
+		.caption{
+			text-align: center;
+		}
+
+		.caption>p{
+			width: 100px;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		.img{
+			overflow: hidden;
+			width: 120px;
+			height: 90px;
+
+			img{
+				width: 120px;
+			}
+		}
+	}
+	a.thumbnail{
+		text-decoration: none;
+	}
+}

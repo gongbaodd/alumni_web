@@ -1,0 +1,47 @@
+<div id="bottom">
+	<div class="col-xs-12">
+		<div class="well bottom-well">
+			<div id="bottom-content" class="col-xs-offset-2 col-xs-8">
+				<ul class="nav nav-pills" role="tablist">
+  					<li role="presentation" class="active">
+  						<a href="#campus"　aria-controls="campus" data-toggle="tab">校园风景</a>
+  					</li>
+  					<li role="presentation">
+  						<a href="#concat" aria-controls="concat" data-toggle="tab">校友通讯</a>
+  					</li>
+  					<li role="presentation">
+  						<a href="#suvenir" aria-controls="suvenir" data-toggle="tab">书画长廊</a>
+  					</li>
+				</ul>
+				<div class="tab-content add-more">
+					{{each msg as data index}}
+					{{if index===0}}<div role="tabpanel" class="tab-pane active" id="campus">{{/if}}
+					{{if index===1}}<div role="tabpanel" class="tab-pane" id="concat">{{/if}}
+					{{if index===2}}<div role="tabpanel" class="tab-pane" id="suvenir">{{/if}}
+						{{each data as value i}}
+						<a class="thumbnail" href="http://alumni.sut.edu.cn/news_list.asp?classid={{value.classid}}&id={{value.id}}" >
+      							<div class="img">
+      								<img height="100px" src="{{value.newspic}}" alt="{{value.title}}">
+      							</div>
+      							<div class="caption">
+        							<p>{{value.title}}</p>
+      							</div>
+    						</a>
+						{{/each}}
+						<a href="javascript:void(0);" class="more">+</a>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-xs-12">
+<center>
+	<div class="linkBut">
+		<p>Copyright 2010 沈阳工业大学校友总会 校友之家办公地点：校部118室 地址：沈阳经济技术开发区沈辽西路111号 校友总会办公室</p>
+		<p>邮编：110870 联系方式：024-25496060 25497700 传真：25497700 邮箱：xiaoyou@sut.edu.cn</p>
+		<p>联系人：宋景城、于雅倩 域名：alumni.sut.edu.cn</p>
+	</div>
+</center>
+</div>

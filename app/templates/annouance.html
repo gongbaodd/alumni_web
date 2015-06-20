@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+	<div class="panel-heading">总会公告</div>
+	<ul class="list-group add-more">
+    		{{each msg as value index}}
+              <li class="list-group-item">
+    		        <a href="http://alumni.sut.edu.cn/news_list.asp?classid={{value.classid}}&id={{value.id}}">
+                                        
+    				<span >{{value.title}}</span><br>
+    				<small class="pull-right">{{value.time}}</small>
+    		              
+                          </a>
+              </li>
+    		{{/each}}
+              <a href="javascript:void(0);" class="more"></a>
+  	</ul>
+</div>

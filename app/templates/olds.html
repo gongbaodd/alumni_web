@@ -1,0 +1,31 @@
+<div class="panel panel-default" role="tabpanel">
+	<ul class="nav nav-tabs" role="tablist">
+            {{each msg as data index}}
+  		<li role="presentation" {{if index===0}}class="active"{{/if}}>
+  			{{if index===0}}<a href="#memories"　aria-controls="memories" data-toggle="tab">工大记忆</a>{{/if}}
+                    {{if index===1}}<a href="#histories" aria-controls="histories" data-toggle="tab">校史点滴</a>{{/if}}
+                    {{if index===2}}<a href="#emotions" aria-controls="emotions" data-toggle="tab">百感交集</a>{{/if}}
+                    {{if index===3}}<a href="#oldDays" aria-controls="oldDays" data-toggle="tab">忆昔岁月</a>{{/if}}
+  		</li>
+            {{/each}}
+	</ul>
+	<div class="tab-content add-more">
+            {{each msg as data index}}
+  		{{if index===0}}<div role="tabpanel" class="tab-pane active" id="memories">{{/if}}
+             {{if index===1}}<div role="tabpanel" class="tab-pane" id="histories">{{/if}}
+             {{if index===2}}<div role="tabpanel" class="tab-pane" id="emotions">{{/if}}
+             {{if index===3}}<div role="tabpanel" class="tab-pane" id="oldDays">{{/if}}
+  			<ul class="list-group">
+				{{each data as value}}
+  				<li class="list-group-item">
+  					<a href="http://alumni.sut.edu.cn/news_list.asp?classid={{value.classid}}&id={{value.id}}" target="_blank">
+  						<span class="title">{{value.title}}</span><span class="pull-right">{{value.time}}</span>
+  					</a>
+  				</li>
+  				{{/each}}
+  			</ul>
+            </div>
+            {{/each}}
+            <a href="javascript:void(0);" class="more"></a>
+  	</div>
+</div>

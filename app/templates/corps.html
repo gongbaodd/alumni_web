@@ -1,0 +1,73 @@
+<div class="panel panel-default" role="tabpanel">
+	<ul class="nav nav-tabs" role="tablist">
+            {{each msg as data index}}
+  		<li role="presentation" {{if index===0}}class="active"{{/if}}>
+  			{{if index===0}}<a href="#CorpLinks"　aria-controls="CorpLinks" data-toggle="tab">企业链接</a>{{/if}}
+                    {{if index===1}}<a href="#CorpInfo" aria-controls="CorpInfo" data-toggle="tab">合作信息</a>{{/if}}
+                    {{if index===2}}<a href="#FamouseAlumni" aria-controls="FamouseAlumni" data-toggle="tab">校友风采</a>{{/if}}
+                    {{if index===3}}<a href="#Donations" aria-controls="Donations" data-toggle="tab">捐赠一览</a>{{/if}}
+  		</li>
+            {{/each}}
+	</ul>
+	<div class="tab-content">
+            {{each msg as data index}}
+  		{{if index===0}}<div role="tabpanel" class="tab-pane active" id="CorpLinks">{{/if}}
+             {{if index===1}}<div role="tabpanel" class="tab-pane add-more" id="CorpInfo">{{/if}}
+             {{if index===2}}<div role="tabpanel" class="tab-pane" id="FamouseAlumni">{{/if}}
+             {{if index===3}}<div role="tabpanel" class="tab-pane add-more" id="Donations">{{/if}}
+             {{if index===0}}
+                    {{each data as values i}}
+                    <div class="corp {{if i!==0}}hide{{/if}}">
+                    {{each values as value}}
+                    <div class="col-xs-6">
+                      <a href="{{value.url}}" class="thumbnail" target="_blank">
+                        <img class="col-xs-4" width=50 height=60 src="http://alumni.sut.edu.cn/{{value.logoadd}}" >
+                        <span class="col-xs-8" >{{value.sitename}}</span>
+                      </a>
+                    </div>
+                    {{/each}}
+                    </div>
+                    {{/each}}
+                    <div class="pagination-cover">
+                          <ul class="pagination pagination-sm">
+                          {{each data as value i}}
+                                <li {{if i===0}}class="active"{{/if}}><a href="javascript:void();">{{i+1}}</a></li>
+                          {{/each}}
+                          </ul>
+                    </div>
+             {{else if index===2}}
+                    {{each data as values i}}
+                    <div class="corp {{if i!==0}}hide{{/if}}">
+                    {{each values as value}}
+                    <div class="col-sm-6">
+                      <a href="http://alumni.sut.edu.cn/news_list.asp?classid={{value.classid}}&id={{value.id}}" class="thumbnail" target="_blank">
+                        <img class="col-sm-4" width=50 height=60 src="{{value.newspic}}" alt="{{value.title}}">
+                        <span class="col-sm-8" >{{value.title}}</span>
+                      </a>
+                    </div>
+                    {{/each}}
+                    </div>
+                    {{/each}}
+                    <div class="pagination-cover">
+                          <ul class="pagination pagination-sm">
+                          {{each data as value i}}
+                                <li {{if i===0}}class="active"{{/if}}><a href="javascript:void();">{{i+1}}</a></li>
+                          {{/each}}
+                          </ul>
+                    </div>
+             {{else}}
+  			<ul class="list-group">
+				{{each data as value}}
+  				<li class="list-group-item">
+  					<a href="http://alumni.sut.edu.cn/news_list.asp?classid={{value.classid}}&id={{value.id}}" target="_blank">
+  						<span class="title">{{value.title}}</span><span class="pull-right">{{value.time}}</span>
+  					</a>
+  				</li>
+  				{{/each}}
+  			</ul>
+                    <a href="javascript:void(0);" class="more"></a>
+              {{/if}}
+            </div>
+            {{/each}}
+  	</div>
+</div>

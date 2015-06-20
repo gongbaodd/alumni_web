@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+	<div class="panel-heading">校友留言</div>
+	<ul class="list-group">
+    		{{each msg as value index}}
+              <li class="list-group-item">
+    		        <a href="http://alumni.sut.edu.cn/book.asp">
+                                        
+    				<span class="title">{{value.name}}:{{value.zhuti}}</span>
+    		              
+                          </a>
+              </li>
+    		{{/each}}
+  	</ul>
+    <nav>
+      <nav>
+  <ul class="pager">
+    <li class="next"><a href="http://alumni.sut.edu.cn/book.asp">快速留言</a></li>
+  </ul>
+</nav>
+</div>

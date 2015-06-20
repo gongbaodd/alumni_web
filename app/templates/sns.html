@@ -1,0 +1,39 @@
+<div class="panel panel-default" role="tabpanel">
+	<ul class="nav nav-tabs" role="tablist">
+            {{each msg as data index}}
+  		<li role="presentation" {{if index===0}}class="active"{{/if}}>
+  			{{if index===0}}<a href="#birth"　aria-controls="birth" data-toggle="tab">生日祝福</a>{{/if}}
+                    {{if index===1}}<a href="#newMem" aria-controls="newMem" data-toggle="tab">新增校友</a>{{/if}}
+                    {{if index===2}}<a href="#hotMem" aria-controls="hotMem" data-toggle="tab">热门校友</a>{{/if}}
+  		</li>
+            {{/each}}
+	</ul>
+	<div class="tab-content">
+            {{each msg as data index}}
+  		{{if index===0}}<div role="tabpanel" class="tab-pane active" id="birth">{{/if}}
+             {{if index===1}}<div role="tabpanel" class="tab-pane" id="newMem">{{/if}}
+             {{if index===2}}<div role="tabpanel" class="tab-pane" id="hotMem">{{/if}}
+             {{if index===0}}
+                    <div>
+  			<ul class="list-group">
+				{{each data as value}}
+  				<li class="list-group-item">
+  					<a href="http://sns.sut.edu.cn/space/{{value.FMemberId}}" target="_blank">
+  						<span class="title">祝{{value.FullName}}校友{{birthday value.FBirthDay}}生日快乐！</span>
+  					</a>
+  				</li>
+  				{{/each}}
+  			</ul>
+                    </div>
+            {{else}}
+                {{each data as value}}
+               <a class="Thumbnail" target="_blank" href="{{value.link}}">
+                        <img src="{{value.imgid}}" alt="{{value.FullName}}">
+                        <div class="caption">{{value.FullName}}</div>
+              </a>
+                {{/each}}
+            {{/if}}
+            </div>
+            {{/each}}
+  	</div>
+</div>

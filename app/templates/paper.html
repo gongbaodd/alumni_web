@@ -1,0 +1,27 @@
+<div class="panel panel-default" role="tabpanel">
+	<ul class="nav nav-tabs" role="tablist">
+            {{each msg as data index}}
+  		<li role="presentation" {{if index===0}}class="active"{{/if}}>
+  			{{if index===0}}<a href="#years"　aria-controls="years" data-toggle="tab">工大年鉴</a>{{/if}}
+                    {{if index===1}}<a href="#rules" aria-controls="rules" data-toggle="tab">机构章程</a>{{/if}}
+  		</li>
+            {{/each}}
+	</ul>
+	<div class="tab-content add-more">
+            {{each msg as data index}}
+  		{{if index===0}}<div role="tabpanel" class="tab-pane active" id="years">{{/if}}
+             {{if index===1}}<div role="tabpanel" class="tab-pane" id="rules">{{/if}}
+  			<ul class="list-group">
+				{{each data as value}}
+  				<li class="list-group-item">
+  					<a href="http://alumni.sut.edu.cn/news_list.asp?classid={{value.classid}}&id={{value.id}}" target="_blank">
+  						<span class="title">{{value.title}}</span>
+  					</a>
+  				</li>
+  				{{/each}}
+  			</ul>
+            </div>
+            {{/each}}
+            <a href="javascript:void(0);" class="more"></a>
+  	</div>
+</div>
